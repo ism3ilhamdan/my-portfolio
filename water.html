@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المياه</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="water.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="admin-panel.html" class="back-arrow">&larr;</a>
+        <h1 class="header-title">إدارة المياه</h1>
+    </header>
+
+    <div class="container main-content-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-section">
+                    <h2>إضافة توزيع مياه جديد</h2>
+                    <form id="addWaterForm">
+                        <div class="mb-3">
+                            <label for="waterArea" class="form-label">منطقة التوزيع</label>
+                            <input type="text" class="form-control" id="waterArea" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="waterQuantity" class="form-label">كمية المياه الموزعة (باللتر)</label>
+                            <input type="number" class="form-control" id="waterQuantity" required min="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="distributionDate" class="form-label">تاريخ التوزيع</label>
+                            <input type="date" class="form-control" id="distributionDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="distributionTime" class="form-label">وقت التسليم</label>
+                            <input type="time" class="form-control" id="distributionTime" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">إضافة توزيع مياه</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-12 mt-5">
+                <div class="table-section">
+                    <h2>بيانات توزيع المياه</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>منطقة التوزيع</th>
+                                    <th>الكمية (باللتر)</th>
+                                    <th>تاريخ التوزيع</th>
+                                    <th>وقت التسليم</th>
+                                    <th>حالة التوزيع</th>
+                                    <th>إجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody id="waterTableBody">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="water.js"></script>
+</body>
+</html>

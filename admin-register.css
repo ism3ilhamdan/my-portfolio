@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #5cb8b8;
+    --dark-color: #333;
+    --light-bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--light-bg-color) 0%, #e9ecef 100%);
+    color: var(--dark-color);
+    padding-top: 80px;
+    direction: rtl; /* ضمان الاتجاه الصحيح */
+    text-align: right;
+}
+
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.main-header .back-arrow {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.main-header .back-arrow:hover {
+    transform: scale(1.1);
+}
+
+.main-header .header-title {
+    font-size: 1.8rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logout-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.logout-link:hover {
+    color: #f0f0f0;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-container .text-center {
+    text-align: center;
+}
+
+.dashboard-item,
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.dashboard-item:hover,
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: #e2e6e9;
+}
+
+.dashboard-item i,
+.dashboard-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.dashboard-item h3,
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.dashboard-item p,
+.dashboard-card p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* تنسيق للشبكة */
+.row {
+    margin: -10px;
+}
+
+.col, .col-12 {
+    padding: 10px;
+}

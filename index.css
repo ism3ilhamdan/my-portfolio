@@ -1,0 +1,116 @@
+        :root {
+            --primary-color: #5cb8b8;
+            --secondary-color: #f0f0f0;
+            --dark-color: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--dark-color);
+            padding-top: 80px;
+        }
+
+        .main-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-container:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn-start {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            padding: 15px 50px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .btn-start:hover {
+            background-color: #4caeaf;
+            border-color: #4caeaf;
+            transform: scale(1.05);
+            color: white;
+        }
+
+        .btn-start:active {
+            transform: scale(0.95);
+        }
+
+        .main-header {
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .main-header .back-arrow {
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin-right: auto;
+        }
+
+        .main-header .back-arrow:hover {
+            transform: scale(1.1);
+        }
+
+        .main-header .header-title {
+            font-size: 1.5rem;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .btn-start {
+                font-size: 1rem;
+                padding: 12px 40px;
+            }
+            .main-container {
+                padding: 20px;
+            }
+        }
